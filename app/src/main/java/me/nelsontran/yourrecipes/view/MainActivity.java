@@ -77,9 +77,8 @@ public class MainActivity extends AppCompatActivity {
                 Recipe recipe1 = recipeList.get(position);
                 String recipeText = recipe1.getRecipe();
 
-                Toast.makeText(MainActivity.this, "" + recipeText, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this, RecipeActivity.class);
-                intent.putExtra("recipe", String.valueOf(recipeText));
+                intent.putExtra("recipe", String.valueOf(recipeText)); //passing recipe content data
                 startActivity(intent);
             }
 
@@ -100,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void deleteRecipe(int position){
+    public void deleteRecipe(int position){
         db.deleteRecipe(recipeList.get(position)); //removing from db
 
         recipeList.remove(position);
