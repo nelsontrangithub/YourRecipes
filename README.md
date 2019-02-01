@@ -7,8 +7,10 @@ An Android application for saving your recipes.
 * [AndroidStudio](https://developer.android.com/studio/)
 * Database built with SQLite
 
-
+## Demo
 
 ![](addrecipegif.gif)
+
 ![](updatingrecipe.gif)
+
 ![](deletingrecipe.gif)
