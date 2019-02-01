@@ -31,7 +31,7 @@
     <TextView
         android:id="@+id/recipe"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="20sp"
         android:layout_below="@id/timestamp"
         android:layout_toRightOf="@id/dot"
         android:textColor="@color/recipe_list_text"
