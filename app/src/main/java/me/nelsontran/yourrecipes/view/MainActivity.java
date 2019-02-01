@@ -1,6 +1,7 @@
 package me.nelsontran.yourrecipes.view;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseHelper db;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -73,7 +74,13 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.addOnItemTouchListener(new RecyclerTouchListener(this, recyclerView, new RecyclerTouchListener.ClickListener() {
             @Override
             public void onClick(View view, final int position) {
+                Recipe recipe1 = recipeList.get(position);
+                String recipeText = recipe1.getRecipe();
 
+                Toast.makeText(MainActivity.this, "" + recipeText, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, RecipeActivity.class);
+                intent.putExtra("recipe", String.valueOf(recipeText));
+                startActivity(intent);
             }
 
             @Override
