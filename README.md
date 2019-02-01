@@ -5,7 +5,10 @@ An Android application for saving your recipes.
 ## Built With
 
 * [AndroidStudio](https://developer.android.com/studio/)
-* Database built with SQLite
+
+## Acknowledgments
+
+* [Android.com SQLite guide](https://developer.android.com/training/data-storage/sqlite)
 
 ## Demo
 
