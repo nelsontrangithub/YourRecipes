@@ -5,6 +5,7 @@ An Android application for saving your recipes.
 ## Built With
 
 * [AndroidStudio](https://developer.android.com/studio/)
+*Full CRUD functionality with SQlite
 
 ## Acknowledgments
 
